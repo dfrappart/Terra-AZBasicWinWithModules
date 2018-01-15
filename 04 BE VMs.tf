@@ -165,8 +165,6 @@ module "VMs_BEDB" {
     VMOffer                     = "${lookup(var.Offer, 1)}"
     VMsku                       = "${lookup(var.sku, 1)}"
     DiagnosticDiskURI           = "${module.DiagStorageAccount.PrimaryBlobEP}"
-    #BootConfigScriptFileName    = "installmysql.sh"
-    #PublicSSHKey                = "${var.AzurePublicSSHKey}"
     EnvironmentTag              = "${var.EnvironmentTag}"
     EnvironmentUsageTag         = "${var.EnvironmentUsageTag}"
 

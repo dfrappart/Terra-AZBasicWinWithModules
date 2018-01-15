@@ -204,8 +204,6 @@ module "VMs_Bastion" {
     VMOffer                     = "${lookup(var.Offer, 0)}"
     VMsku                       = "${lookup(var.sku, 0)}"
     DiagnosticDiskURI           = "${module.DiagStorageAccount.PrimaryBlobEP}"
-    #BootConfigScriptFileName    = "deployansible.sh"
-    #PublicSSHKey                = "${var.AzurePublicSSHKey}"
     EnvironmentTag              = "${var.EnvironmentTag}"
     EnvironmentUsageTag         = "${var.EnvironmentUsageTag}"
 

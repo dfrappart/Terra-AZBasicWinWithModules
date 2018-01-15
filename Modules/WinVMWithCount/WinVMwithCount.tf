@@ -195,7 +195,7 @@ resource "azurerm_virtual_machine" "TerraVMwithCount" {
         computer_name   = "${var.VMName}"
         admin_username  = "${var.VMAdminName}"
         admin_password  = "${var.VMAdminPassword}"
-        #custom_data     = "${file("deploy1stDCtest.ps1")}"
+        
 
     }
 
