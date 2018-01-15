@@ -1,0 +1,1 @@
+#This template is deploy a basic infrastructure with Windows VMs Server 2016
