@@ -115,8 +115,8 @@ module "AS_Bastion" {
 
     #Module source
 
-    #source = "./Modules/13 AvailabilitySet"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//13 AvailabilitySet"
+    source = "./Modules/AvailabilitySet"
+    #source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//13 AvailabilitySet"
 
     #Module variables
     ASName                  = "AS_Bastion"
