@@ -211,8 +211,8 @@ module "VMs_FEWEB" {
 
     #module source
 
-    source = "./Modules/WinVMWithCount"
-    #source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//14 LinuxVMWithCount"
+    #source = "./Modules/WinVMWithCount"
+    source = "github.com/dfrappart/Terra-AZBasicWinWithModules//Modules//WinVMWithCount"
 
 
     #Module variables
@@ -246,8 +246,8 @@ module "VMs_FEWEB" {
 module "NetworkWatcherAgentForFEWeb" {
 
     #Module Location
-    source = "./Modules/NetworkwatcheragentWin"
-    #source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//20 LinuxNetworkWatcherAgent"
+    #source = "./Modules/NetworkWatcherAgentWin"
+    source = "github.com/dfrappart/Terra-AZBasicWinWithModules//Modules//NetworkWatcherAgentWin"
 
 
     #Module variables
