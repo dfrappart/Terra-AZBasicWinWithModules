@@ -172,7 +172,7 @@ resource "azurerm_virtual_machine" "TerraVMwithCount" {
 
     storage_os_disk {
 
-        name                = "${var.VMName}${count.index}-OSDisk"
+        name                = "${var.VMName}${count.index+1}-OSDisk"
         caching             = "ReadWrite"
         create_option       = "FromImage"
         managed_disk_type   = "${var.VMStorageTier}"
@@ -192,7 +192,7 @@ resource "azurerm_virtual_machine" "TerraVMwithCount" {
 
     os_profile {
 
-        computer_name   = "${var.VMName}"
+        computer_name   = "${var.VMName}${count.index+1}"
         admin_username  = "${var.VMAdminName}"
         admin_password  = "${var.VMAdminPassword}"
         
@@ -219,7 +219,7 @@ resource "azurerm_virtual_machine_extension" "Terra-BGInfoAgent" {
   
 
   count                = "${var.VMCount}"
-  name                 = "${var.VMName}${count.index}BGInfo"
+  name                 = "${var.VMName}${count.index+1}BGInfo"
   location             = "${var.VMLocation}"
   resource_group_name  = "${var.VMRG}"
   virtual_machine_name = "${element(azurerm_virtual_machine.TerraVMwithCount.*.name,count.index)}"
