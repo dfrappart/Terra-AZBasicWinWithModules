@@ -1,5 +1,5 @@
 ###################################################################################
-#This module allow the creation of 1 Windows VM with 1 NIC
+#This module allows the creation of 1 Windows VM with 1 NIC
 ###################################################################################
 
 #Variable declaration for Module
