@@ -73,7 +73,7 @@ variable "VMAdminPassword" {
   
 }
 
-The OS Disk Size
+#The OS Disk Size
 
 variable "OSDisksize" {
   type    = "string"
