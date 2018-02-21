@@ -186,12 +186,12 @@ output "Bastionfqdn" {
 
     value = ["${module.BastionPublicIP.fqdns}"]
 }
-
+/*
 output "BastionpublicIPAddress" {
 
     value = ["${module.BastionPublicIP.IPAddresses}"]
 }
-
+*/
 ######################################################
 #Azure Web LB Output
 
@@ -200,7 +200,10 @@ output "LBWebPublicIPfqdn" {
     value = ["${module.LBWebPublicIP.fqdns}"]
 }
 
+/*
 output "LBWebPublicIPpublicIPAddress" {
 
     value = ["${module.LBWebPublicIP.IPAddresses}"]
 }
+
+*/

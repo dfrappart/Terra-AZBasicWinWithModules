@@ -85,7 +85,7 @@ module "AllowAllBastiontoInternetOut" {
     NSGRuleProtocol = "*"
     NSGRuleSourcePortRange = "*"
     NSGRuleDestinationPortRange = "*"
-    NSGRuleSourceAddressPrefix = "${lookup(var.SubnetAddressRange, 0)}"
+    NSGRuleSourceAddressPrefix = "${lookup(var.SubnetAddressRange, 2)}"
     NSGRuleDestinationAddressPrefix = "Internet"
 }
 
