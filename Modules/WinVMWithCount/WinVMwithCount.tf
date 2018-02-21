@@ -77,7 +77,7 @@ variable "VMAdminPassword" {
 
 variable "OSDisksize" {
   type    = "string"
-  default = "127"
+  default = "1023"
 }
 
 # Managed Data Disk reference
