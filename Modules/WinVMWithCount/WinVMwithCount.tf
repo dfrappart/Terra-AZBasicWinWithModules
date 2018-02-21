@@ -73,12 +73,16 @@ variable "VMAdminPassword" {
   
 }
 
+
+/*
 #The OS Disk Size
 
 variable "OSDisksize" {
   type    = "string"
   default = "1023"
 }
+
+*/
 
 # Managed Data Disk reference
 
@@ -183,7 +187,7 @@ resource "azurerm_virtual_machine" "TerraVMwithCount" {
         caching             = "ReadWrite"
         create_option       = "FromImage"
         managed_disk_type   = "${var.VMStorageTier}"
-        disk_size_gb        = "${var.OSDisksize}"
+        #disk_size_gb        = "${var.OSDisksize}"
 
     }
 
