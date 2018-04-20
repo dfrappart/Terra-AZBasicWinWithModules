@@ -3,33 +3,28 @@
 #The Agent count
 variable "AgentCount" {
   type    = "string"
-
+  default = "1"
 }
 
 #The Agent Name
 variable "AgentName" {
-  type    = "string"
-
+  type = "string"
 }
 
 #The Agent Location (Azure Region)
 variable "AgentLocation" {
-  type    = "string"
-
+  type = "string"
 }
 
 #The RG in which the VM resides
 variable "AgentRG" {
-  type    = "string"
-
+  type = "string"
 }
 
 #The VM Name
 variable "VMName" {
-  type    = "list"
-
+  type = "list"
 }
-
 
 #Tag info
 
@@ -46,8 +41,6 @@ variable "EnvironmentUsageTag" {
 #Adding DSC agent
 
 resource "azurerm_virtual_machine_extension" "Terra-DSCAgentWin" {
-  
-
   count                = "${var.AgentCount}"
   name                 = "${var.AgentName}${count.index+1}-DSCAgentWin"
   location             = "${var.AgentLocation}"
@@ -57,13 +50,13 @@ resource "azurerm_virtual_machine_extension" "Terra-DSCAgentWin" {
   type                 = "dsc"
   type_handler_version = "2.9"
 
-      settings = <<SETTINGS
+  settings = <<SETTINGS
         {   
         
         "commandToExecute": ""
         }
 SETTINGS
-    
+
   tags {
     environment = "${var.EnvironmentTag}"
     usage       = "${var.EnvironmentUsageTag}"
