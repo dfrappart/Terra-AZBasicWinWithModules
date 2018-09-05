@@ -127,7 +127,7 @@ module "InfraFileShare" {
     ShareName           = "infrafileshare"
     RGName              = "${module.ResourceGroup.Name}"
     StorageAccountName  = "${module.FilesExchangeStorageAccount.Name}"
-    Quota               = "0"
+    Quota               = "5120"
 
 
 }
