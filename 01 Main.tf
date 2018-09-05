@@ -12,7 +12,7 @@
 
 provider "azurerm" {
 
-    subscription_id = "${var.AzureSubscriptionID}"
+    subscription_id = "${var.AzureSubscriptionID3}"
     client_id       = "${var.AzureClientID}"
     client_secret   = "${var.AzureClientSecret}"
     tenant_id       = "${var.AzureTenantID}"
@@ -49,7 +49,7 @@ module "SampleArchi_vNet" {
     source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//02 vNet/"
 
     #Module variable
-    vNetName                = "SampleArchi_vNet"
+    vNetName                = "VNet_${var.EnvironmentTag}"
     RGName                  = "${module.ResourceGroup.Name}"
     vNetLocation            = "${var.AzureRegion}"
     vNetAddressSpace        = "${var.vNetIPRange}"
