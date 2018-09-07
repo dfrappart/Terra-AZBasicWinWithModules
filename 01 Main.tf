@@ -12,7 +12,7 @@
 
 provider "azurerm" {
 
-    subscription_id = "${var.AzureSubscriptionID}"
+    subscription_id = "${var.AzureSubscriptionID3}"
     client_id       = "${var.AzureClientID}"
     client_secret   = "${var.AzureClientSecret}"
     tenant_id       = "${var.AzureTenantID}"
@@ -127,7 +127,7 @@ module "InfraFileShare" {
     ShareName           = "infrafileshare"
     RGName              = "${module.ResourceGroup.Name}"
     StorageAccountName  = "${module.FilesExchangeStorageAccount.Name}"
-    Quota               = "0"
+    Quota               = "5120"
 
 
 }
