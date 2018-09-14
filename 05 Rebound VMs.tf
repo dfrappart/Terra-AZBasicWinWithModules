@@ -7,8 +7,8 @@
 module "AllowRDPFromInternetBastionIn" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -28,8 +28,8 @@ module "AllowRDPFromInternetBastionIn" {
 module "AllowRDPFromBastiontoFEOut" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
     #Module variable
     RGName = "${module.ResourceGroup.Name}"
@@ -48,8 +48,8 @@ module "AllowRDPFromBastiontoFEOut" {
 module "AllowRDPFromBastiontoBEOut" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -71,8 +71,8 @@ module "AllowRDPFromBastiontoBEOut" {
 module "AllowAllBastiontoInternetOut" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable

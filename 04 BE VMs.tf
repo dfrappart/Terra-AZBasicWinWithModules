@@ -7,8 +7,8 @@
 module "AllowSQLFromFEtoBEIn" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -28,8 +28,8 @@ module "AllowSQLFromFEtoBEIn" {
 module "AllowRDPFromBastiontoBEIn" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -49,8 +49,8 @@ module "AllowRDPFromBastiontoBEIn" {
 module "AllowAllBEtoInternetOut" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable

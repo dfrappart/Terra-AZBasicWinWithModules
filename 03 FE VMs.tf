@@ -7,8 +7,8 @@
 module "AllowHTTPFromInternetFEIn" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
     #Module variable
     RGName = "${module.ResourceGroup.Name}"
@@ -27,8 +27,8 @@ module "AllowHTTPFromInternetFEIn" {
 module "AllowRDPFromBastiontoFEIn" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -48,8 +48,8 @@ module "AllowRDPFromBastiontoFEIn" {
 module "AllowSQLFromFEtoBEOut" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -69,8 +69,8 @@ module "AllowSQLFromFEtoBEOut" {
 module "AllowAllFEtoInternetOut" {
 
     #Module source
-    #source = "./Modules/08 NSGRule"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08 NSGRule"
+    #source = "./Modules/08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
