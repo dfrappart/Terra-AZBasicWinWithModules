@@ -212,7 +212,7 @@ module "VMs_FEWEB" {
     #module source
 
     #source = "./Modules/WinVMWithCount"
-    source = "github.com/dfrappart/Terra-AZBasicWinWithModules//Modules//WinVMWithCount"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//15 WinVMWithCount"
 
 
     #Module variables
@@ -233,6 +233,7 @@ module "VMs_FEWEB" {
     VMPublisherName             = "${lookup(var.PublisherName, 0)}"
     VMOffer                     = "${lookup(var.Offer, 0)}"
     VMsku                       = "${lookup(var.sku, 0)}"
+    CloudinitscriptPath         = "./Scripts/example.ps1"
     DiagnosticDiskURI           = "${module.DiagStorageAccount.PrimaryBlobEP}"
     EnvironmentTag              = "${var.EnvironmentTag}"
     EnvironmentUsageTag         = "${var.EnvironmentUsageTag}"
@@ -247,7 +248,7 @@ module "NetworkWatcherAgentForFEWeb" {
 
     #Module Location
     #source = "./Modules/NetworkWatcherAgentWin"
-    source = "github.com/dfrappart/Terra-AZBasicWinWithModules//Modules//NetworkWatcherAgentWin"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//21 NetworkWatcherAgentWin"
 
 
     #Module variables
@@ -260,3 +261,21 @@ module "NetworkWatcherAgentForFEWeb" {
     EnvironmentUsageTag     = "${var.EnvironmentUsageTag}"
 }
 
+module "CustomExtensionWinFE" {
+  #Module location
+  source = "github.com/dfrappart/Terra-AZModuletest//Modules//22 CustomExtensionScriptwithtpl"
+
+  #Module variables
+
+  AgentCount           = "3"
+  AgentName            = "CustomExtensionWinForWinFE"
+  AgentLocation        = "${var.AzureRegion}"
+  AgentRG              = "${module.ResourceGroup.Name}"
+  VMName               = ["${module.VMs_FEWEB.Name}"]
+  EnvironmentTag       = "${var.EnvironmentTag}"
+  EnvironmentUsageTag  = "${var.EnvironmentUsageTag}"
+  AgentPublisher       = "microsoft.compute"
+  AgentType            = "customscriptextension"
+  Agentversion         = "1.9"
+  SettingsTemplatePath = "./Templates/CloudInitwin.tpl"
+}

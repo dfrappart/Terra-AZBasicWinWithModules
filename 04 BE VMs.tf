@@ -190,3 +190,21 @@ module "NetworkWatcherAgentForBEDB" {
     EnvironmentUsageTag     = "${var.EnvironmentUsageTag}"
 }
 
+module "CustomExtensionWinBE" {
+  #Module location
+  source = "github.com/dfrappart/Terra-AZModuletest//Modules//22 CustomExtensionScriptwithtpl"
+
+  #Module variables
+
+  AgentCount           = "2"
+  AgentName            = "CustomExtensionWinBE"
+  AgentLocation        = "${var.AzureRegion}"
+  AgentRG              = "${module.ResourceGroup.Name}"
+  VMName               = ["${module.VMs_BEDB.Name}"]
+  EnvironmentTag       = "${var.EnvironmentTag}"
+  EnvironmentUsageTag  = "${var.EnvironmentUsageTag}"
+  AgentPublisher       = "microsoft.compute"
+  AgentType            = "customscriptextension"
+  Agentversion         = "1.9"
+  SettingsTemplatePath = "./Templates/CloudInitwin2.tpl"
+}
