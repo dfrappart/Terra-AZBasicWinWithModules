@@ -8,7 +8,7 @@ module "AllowHTTPFromInternetFEIn" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
     #Module variable
     RGName = "${module.ResourceGroup.Name}"
@@ -28,7 +28,7 @@ module "AllowRDPFromBastiontoFEIn" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -49,7 +49,7 @@ module "AllowSQLFromFEtoBEOut" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -70,7 +70,7 @@ module "AllowAllFEtoInternetOut" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -93,7 +93,7 @@ module "LBWebPublicIP" {
 
     #Module source
     #source = "./Modules/10 PublicIP"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//10 PublicIP"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//10 PublicIP"
 
 
     #Module variables
@@ -111,7 +111,7 @@ module "LBWebFE" {
 
     #Module source
     #source = "./Modules/15 External LB"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//15 External LB"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//18 External LB"
 
 
     #Module variables
@@ -142,7 +142,7 @@ module "AS_FEWEB" {
     #Module source
 
     source = "./Modules/AvailabilitySet"
-    #source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//13 AvailabilitySet"
+    #source = "github.com/dfrappart/Terra-AZModuletest//Modules//13 AvailabilitySet"
 
 
     #Module variables
@@ -162,7 +162,7 @@ module "NICs_FEWEB" {
     #module source
 
     #source = "./Modules/09 NICWithoutPIPWithCount"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//09 NICWithoutPIPWithCount"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//12-2 NICWithoutPIPWithCount"
 
 
     #Module variables
@@ -187,7 +187,7 @@ module "DataDisks_FEWEB" {
     #Module source
 
     #source = "./Modules/06 ManagedDiskswithcount"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//06 ManagedDiskswithcount"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//11 ManagedDiskswithcount"
 
 
     #Module variables

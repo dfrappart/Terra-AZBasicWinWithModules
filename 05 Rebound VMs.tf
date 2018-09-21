@@ -8,7 +8,7 @@ module "AllowRDPFromInternetBastionIn" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -29,7 +29,7 @@ module "AllowRDPFromBastiontoFEOut" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
     #Module variable
     RGName = "${module.ResourceGroup.Name}"
@@ -49,7 +49,7 @@ module "AllowRDPFromBastiontoBEOut" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -72,7 +72,7 @@ module "AllowAllBastiontoInternetOut" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -95,7 +95,7 @@ module "BastionPublicIP" {
 
     #Module source
     #source = "./Modules/10 PublicIP"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//10 PublicIP"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//10 PublicIP"
 
     #Module variables
     PublicIPCount           = "1"
@@ -115,8 +115,8 @@ module "AS_Bastion" {
 
     #Module source
 
-    source = "./Modules/AvailabilitySet"
-    #source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//13 AvailabilitySet"
+
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//13 AvailabilitySet"
 
     #Module variables
     ASName                  = "AS_Bastion"
@@ -135,7 +135,7 @@ module "NICs_Bastion" {
     #module source
 
     #source = "./Modules/12 NICwithPIPWithCount"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//12 NICwithPIPWithCount"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//12-1 NICwithPIPWithCount"
 
     #Module variables
 
@@ -158,7 +158,7 @@ module "DataDisks_Bastion" {
     #Module source
 
     #source = "./Modules/06 ManagedDiskswithcount"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//06 ManagedDiskswithcount"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//11 ManagedDiskswithcount"
 
     #Module variables
 

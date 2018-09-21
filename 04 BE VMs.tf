@@ -8,7 +8,7 @@ module "AllowSQLFromFEtoBEIn" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -29,7 +29,7 @@ module "AllowRDPFromBastiontoBEIn" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -50,7 +50,7 @@ module "AllowAllBEtoInternetOut" {
 
     #Module source
     #source = "./Modules/08-2 NSGRule with services tags"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//08-2 NSGRule with services tags"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//08-2 NSGRule with services tags"
 
 
     #Module variable
@@ -75,7 +75,7 @@ module "AS_BEDB" {
     #Module source
 
     source = "./Modules/AvailabilitySet"
-    #source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//13 AvailabilitySet"
+    #source = "github.com/dfrappart/Terra-AZModuletest//Modules//13 AvailabilitySet"
 
 
     #Module variables
@@ -95,7 +95,7 @@ module "NICs_BEDB" {
     #module source
 
     #source = "./Modules/09 NICWithoutPIPWithCount"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//09 NICWithoutPIPWithCount"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//12-2 NICWithoutPIPWithCount"
 
 
     #Module variables
@@ -118,7 +118,7 @@ module "DataDisks_BEDB" {
     #Module source
 
     #source = "./Modules/06 ManagedDiskswithcount"
-    source = "github.com/dfrappart/Terra-AZBasiclinuxWithModules//Modules//06 ManagedDiskswithcount"
+    source = "github.com/dfrappart/Terra-AZModuletest//Modules//11 ManagedDiskswithcount"
 
 
     #Module variables
